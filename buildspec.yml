@@ -4,7 +4,7 @@ phases:
     commands:
       - echo "Starting AI Code Review..."
       - aws lambda invoke \
-          --function-name ai-code-reviewer \
+          --function-name mylambdafunction \
           --payload file://app.py \
           response.json
 artifacts:
