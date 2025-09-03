@@ -1,12 +1,13 @@
 version: 0.2
+
 phases:
   build:
     commands:
       - echo "Starting AI Code Review..."
       - aws lambda invoke \
           --function-name mylambdafunction \
-          --payload file://app.py \
           response.json
+
 artifacts:
   files:
     - response.json
